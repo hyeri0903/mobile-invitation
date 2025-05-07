@@ -19,12 +19,12 @@ const Features = () => {
           </div>
           <div className="mt-8 text-xl text-white dark:text-gray-700 font-light text-center w-full">
             WHERE
-            <p className="text-xl font-bold text-gray-300 dark:text-black mt-2">
+            <p className="text-large font-bold text-gray-300 dark:text-black mt-2">
               Attatched Map Here
             </p>
           </div>
           <div className="mt-8 text-xl text-white dark:text-gray-700 font-light text-center w-full">
-            Contact
+            CONTACT
             <p className="text-xl font-bold text-gray-300 dark:text-black mt-2">
               010.1234.5678
             </p>
