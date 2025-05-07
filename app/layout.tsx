@@ -4,14 +4,14 @@ import { ThemeProvider } from "next-themes";
 import "styles/globals.css";
 
 export const metadata: Metadata = {
-  title: "Mobile Invitation Template",
-  description: "This is Mobile Invitation Template",
+  title: "Welcome To Our Amazing Party🎉",
+  description: "You're invited to our unforgettable celebration!",
   icons: {
     icon: 'invitation.png'
   },
   openGraph: {
     title: "Welcome To Amazing Party!!!",
-    description: "This is Mobile Invitation template.",
+    description: "You're invited to our unforgettable celebration!",
     url: "https://mobile-invitation-rouge.vercel.app/",
     siteName: "Mobile Invitation",
     images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Welcome To Amazing Party!!!",
-    description: "This is Mobile Invitation template.",
+    description: "You're invited to our unforgettable celebration!",
     images: ["https://mobile-invitation-rouge.vercel.app/invitation.png"],
   },
 };
