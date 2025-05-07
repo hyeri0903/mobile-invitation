@@ -1,0 +1,78 @@
+import React from "react";
+import FeatureCard from "./FeatureCard";
+import { FaReact, FaDatabase, FaShieldAlt } from "react-icons/fa";
+import { SiNextdotjs, SiTailwindcss, SiStripe } from "react-icons/si";
+
+const Features = () => {
+  const features = [
+    {
+      icon: SiNextdotjs,
+      title: "Next.js 14",
+      description: "App dir, Routing, Layouts, components, and more.",
+    },
+    {
+      icon: FaReact,
+      title: "React 18",
+      description: "Server and Client Components. using hooks and context.",
+    },
+    {
+      icon: FaDatabase,
+      title: "Database",
+      description: "Postgres basic database and other cool features to come.",
+    },
+    {
+      icon: SiTailwindcss,
+      title: "Components",
+      description: "Awesome components built with Tailwind CSS and more to come.",
+    },
+    {
+      icon: FaShieldAlt,
+      title: "Authentication",
+      description: "Talk about your authentication features built into your app.",
+    },
+    {
+      icon: SiStripe,
+      title: "Subscriptions",
+      description: "Talk about your subscription features and how they work.",
+    },
+  ];
+
+  return (
+    <section className="w-full min-h-screen mx-auto flex flex-col justify-center items-center bg-black dark:bg-white transition-colors duration-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center justify-center w-full">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white dark:text-black mb-4 text-center w-full">
+          You're invited to our Retreat Party
+          </h2>
+          <p className="mt-8 text-xl text-white dark:text-black font-light text-center w-full">
+            WHEN
+            <p className="text-xl font-bold text-gray-300 dark:text-black mt-2">
+              2025.09.03 17:00 - 22:00
+            </p>
+          </p>
+          <p className="mt-8 text-xl text-white dark:text-gray-700 font-light text-center w-full">
+            WHERE
+            <p className="text-xl font-bold text-gray-300 dark:text-black mt-2">
+              Attatched Map Here
+            </p>
+          </p>
+          <p className="mt-8 text-xl text-white dark:text-gray-700 font-light text-center w-full">
+            Contact
+            <p className="text-xl font-bold text-gray-300 dark:text-black mt-2">
+              010.1234.5678
+            </p>
+          </p>
+        </div>
+        <div className="mt-16">
+          <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
+            {/* {features.map((feature, index) => (
+              <FeatureCard key={index} {...feature} />
+            ))} */}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Features;
