@@ -5,7 +5,7 @@ import "styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Mobile Invitation Template",
-  description: "Next JS SaaS Starter Template",
+  description: "This is Mobile Invitation Template",
   icons: {
     icon: 'invitation.png'
   },
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mobile Invitation",
-    description: "Mobile Invitation",
+    title: "Welcome To Amazing Party!!!",
+    description: "This is Mobile Invitation template.",
     images: ["https://mobile-invitation-rouge.vercel.app/invitation.png"],
   },
 };
