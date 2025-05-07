@@ -4,7 +4,7 @@ export default function Details() {
       <div className="mx-auto px-4 max-w-3xl">
         <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-center mb-10 text-gray-900 dark:text-white">
           Details
-          <div className="mt-4 w-20 h-0.5 bg-white dark:bg-white mx-auto mb-3 rounded" />
+          <div className="mt-4 w-20 h-0.5 bg-gray-200 dark:bg-gray-700 mx-auto mb-3 rounded" />
         </h2>
         <table className="table-auto border-separate border-spacing-y-10 mx-auto">
           <tbody>
@@ -46,7 +46,7 @@ export default function Details() {
         </table>
         
         <div className="text-center mt-10 text-gray-900 dark:text-white">
-        <div className="w-20 h-0.5 bg-gray-700 dark:bg-white mx-auto mb-3 rounded" />
+        <div className="w-20 h-0.5 bg-gray-200 dark:bg-gray-700 mx-auto mb-3 rounded" />
           Come and Join us!
         </div>
       </div>
