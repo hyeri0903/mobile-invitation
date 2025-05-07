@@ -9,22 +9,6 @@ import Head from 'next/head';
 export default function Page() {
   return (
     <>
-     <Head>
-        <title>Mobile Invitation</title>
-        {/* open graph */}
-        <meta name="description" content="Mobile Invitation - description" />
-        <meta property="og:title" content="Welcome to our Amazing Party!!!"/>
-        <meta property="og:description" content="Mobile Invitation - description"/>
-        <meta property="og:image" content="https://mobile-invitation-rouge.vercel.app/invitation.png" />
-        <meta property="og:url" content="https://mobile-invitation-rouge.vercel.app/"/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:site_name" content="Mobile Invitation Template"/>
-        {/* twitter card */}
-        <meta name="twitter:card" content="summary"/>
-        <meta name="twitter:title" content="Welcome to our Amazing Party!!!"/>
-        <meta name="twitter:description" content="Mobile Invitation - description"/>
-        <meta name="twitter:image" content="https://mobile-invitation-rouge.vercel.app/invitation.png"/>
-    </Head>
     <div className="flex flex-col min-h-screen bg-white dark:bg-black">
       <Header />
       <main>
