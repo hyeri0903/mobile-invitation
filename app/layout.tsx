@@ -10,8 +10,8 @@ export const metadata: Metadata = {
     icon: 'invitation.png'
   },
   openGraph: {
-    title: "Mobile Invitation Template",
-    description: "Mobile Invitation.",
+    title: "Welcome To Amazing Party!!!",
+    description: "This is Mobile Invitation template.",
     url: "https://mobile-invitation-rouge.vercel.app/",
     siteName: "Mobile Invitation",
     images: [
