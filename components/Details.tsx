@@ -38,7 +38,7 @@ export default function Details() {
                 <div>19:00 - 19:30 &nbsp;&nbsp;Break Time</div>
                 <div>19:30 - 20:30 &nbsp;&nbsp;Watch Movies</div>
                 <div>20:30 - 21:30 &nbsp;&nbsp;Enjoy Party!</div>
-                <div>21:30 - 22:00 &nbsp;&nbsp;Cleaning</div>
+                <div>21:30 - 22:00 &nbsp;&nbsp;Wrap Up</div>
               </div>
               </td>
             </tr>
