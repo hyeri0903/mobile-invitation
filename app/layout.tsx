@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Mobile Invitation",
     images: [
       {
-        url: "https://mobile-invitation-rouge.vercel.app/api/og",
+        url: "https://mobile-invitation-rouge.vercel.app/invitation.png",
         width: 1200,
         height: 630,
         alt: "Mobile Invitation Thumbnail",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Mobile Invitation",
     description: "Mobile Invitation",
-    images: ["https://mobile-invitation-rouge.vercel.app/api/og"],
+    images: ["https://mobile-invitation-rouge.vercel.app/invitation.png"],
   },
 };
 
