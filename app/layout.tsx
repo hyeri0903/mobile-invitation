@@ -8,7 +8,28 @@ export const metadata: Metadata = {
   description: "Next JS SaaS Starter Template",
   icons: {
     icon: 'invitation.png'
-  }
+  },
+  openGraph: {
+    title: "Mobile Invitation Template",
+    description: "Mobile Invitation.",
+    url: "https://mobile-invitation-rouge.vercel.app/",
+    siteName: "Mobile Invitation",
+    images: [
+      {
+        url: "https://mobile-invitation-rouge.vercel.app/api/og",
+        width: 1200,
+        height: 630,
+        alt: "Mobile Invitation Thumbnail",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mobile Invitation",
+    description: "Mobile Invitation",
+    images: ["https://mobile-invitation-rouge.vercel.app/api/og"],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
