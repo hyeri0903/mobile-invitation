@@ -1,6 +1,7 @@
 import React from "react";
 import { FaReact, FaDatabase, FaShieldAlt } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiStripe } from "react-icons/si";
+import MapInfo from "./MapInfo";
 
 const Features = () => {
 
@@ -19,9 +20,9 @@ const Features = () => {
           </div>
           <div className="mt-8 text-xl text-white dark:text-gray-700 font-light text-center w-full">
             WHERE
-            <p className="text-large font-bold text-gray-300 dark:text-black mt-2">
-              Attatched Map Here
-            </p>
+            <div className="text-large font-bold text-gray-300 dark:text-black mt-2">
+              <MapInfo />
+            </div>
           </div>
           <div className="mt-8 text-xl text-white dark:text-gray-700 font-light text-center w-full">
             CONTACT
