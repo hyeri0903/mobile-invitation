@@ -8,7 +8,7 @@ const Features = () => {
   return (
     <section className="w-full min-h-screen mx-auto flex flex-col justify-center items-center bg-black dark:bg-white transition-colors duration-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center justify-center w-full">
+        <div className="flex flex-col items-center justify-center w-full mt-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white dark:text-black mb-4 text-center w-full">
           You're invited to our Retreat Party
           </h2>
