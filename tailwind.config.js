@@ -5,6 +5,10 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        montserrat: ['var(--font-montserrat)'],
+        playfairsc: ['var(--font-playfair-sc)', 'serif'],
+        dmserif: ['var(--font-dm-serif-display)', 'serif'],
+        lora: ['var(--font-lora)', 'serif'],
         sans: [
           "Inter Tight",
           "ui-sans-serif",
