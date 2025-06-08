@@ -54,7 +54,7 @@ export default function Details() {
             </div>
           </div>
           <motion.img 
-            src="/heartballoon.jpg" 
+            src="/flower.jpg" 
             alt="2부 이미지" 
             className="w-full md:w-[790px] h-[600px] object-cover order-1 md:order-2"
             initial={{ x: 200, opacity: 0 }}
