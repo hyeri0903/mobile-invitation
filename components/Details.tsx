@@ -1,15 +1,27 @@
+"use client";
+
+import { motion } from 'framer-motion';
+
 export default function Details() {
   return (
     <section className="w-full min-h-screen mx-auto flex flex-col bg-gray-50 dark:bg-gray-900">
         <div className="flex justify-center items-center mt-10">
-          <h2 className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-center mb-10 text-gray-900 dark:text-white">
+          <h2 className="font-dmserif text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-center mb-10 text-gray-900 dark:text-white">
             Details
             <div className="mt-4 w-20 h-0.5 bg-gray-200 dark:bg-gray-700 mx-auto mb-3 rounded" />
           </h2>
         </div>
         {/* 1부 - 오른쪽 배치 */}
         <div className="flex flex-col md:flex-row">
-          <img src="/balloon.jpg" alt="1부 이미지" className="w-full md:w-[790px] h-[600px] object-cover" />
+          <motion.img 
+            src="/heartcake.jpg" 
+            alt="1부 이미지" 
+            className="w-full md:w-[790px] h-[600px] object-cover"
+            initial={{ x: -200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+          />
           <div className="flex-1 flex flex-col justify-center items-center p-4 md:p-0">
             <div className="text-center mb-5">
               <div className="text-xl font-bold text-gray-600 dark:text-white">1부</div>
@@ -41,7 +53,15 @@ export default function Details() {
               </div>
             </div>
           </div>
-          <img src="/balloon.jpg" alt="2부 이미지" className="w-full md:w-[790px] h-[600px] object-cover order-1 md:order-2" />
+          <motion.img 
+            src="/heartballoon.jpg" 
+            alt="2부 이미지" 
+            className="w-full md:w-[790px] h-[600px] object-cover order-1 md:order-2"
+            initial={{ x: 200, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.3 }}
+          />
         </div>
         
         {/* <div className="text-center mt-10 text-gray-900 dark:text-white">
