@@ -1,6 +1,7 @@
 #  🎉 모바일 파티 초대장 (Mobile Invitation)
 모바일에 최적화된 파티 초대장 웹 애플리케이션입니다.
-This application is mobile invitation for special occasions such as party
+
+A mobile-optimized party invitation web application.
 
 ## 🛠️ 기술 스택
 
