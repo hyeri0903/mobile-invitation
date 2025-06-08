@@ -3,6 +3,8 @@
 
 A mobile-optimized party invitation web application.
 
+▶️ Demo: [Mobile Invitation Demo](mobile-invitation-rouge.vercel.app)
+
 ## 🛠️ 기술 스택
 
 - **Frontend**: Next.js, React, TypeScript
