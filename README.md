@@ -1,9 +1,9 @@
-#  🎉 모바일 파티 초대장 (Mobile Invitation)
+#  🎉 모바일 파티 초대장 (Mobile Party Invitation)
 모바일에 최적화된 파티 초대장 웹 애플리케이션입니다.
 
 A mobile-optimized party invitation web application.
 
-▶️ Demo: [Mobile Invitation Demo](mobile-invitation-rouge.vercel.app)
+▶️ Demo: [Mobile Invitation Demo](https://mobile-invitation-rouge.vercel.app/)
 
 ## 🛠️ 기술 스택
 
