@@ -10,7 +10,7 @@ const Features = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-center w-full mt-10">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white dark:text-black mb-4 text-center w-full">
-          You're invited to our Retreat Party
+          You're invited to Retreat Party
           </h2>
           <div className="mt-8 text-xl text-white dark:text-black font-light text-center w-full">
             WHEN
@@ -33,9 +33,7 @@ const Features = () => {
         </div>
         <div className="mt-16">
           <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3">
-            {/* {features.map((feature, index) => (
-              <FeatureCard key={index} {...feature} />
-            ))} */}
+           참석 여부 확인
           </div>
         </div>
       </div>
