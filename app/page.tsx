@@ -4,6 +4,7 @@ import Footer from "components/Footer";
 import Details from "components/Details";
 import Main from "components/Main";
 import Head from 'next/head';
+import Rsvp from "components/Rsvp";
 
 
 export default function Page() {
@@ -15,7 +16,7 @@ export default function Page() {
         <Main />
         <Features />
         <Details />
-        {/* <Download /> */}
+        <Rsvp />
       </main>
       <Footer />
     </div>

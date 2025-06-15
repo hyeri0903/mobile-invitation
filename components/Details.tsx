@@ -24,7 +24,7 @@ export default function Details() {
           />
           <div className="flex-1 flex flex-col justify-center items-center p-4 md:p-0">
             <div className="text-center mb-5">
-              <div className="text-xl font-bold text-gray-600 dark:text-white">1부</div>
+              <div className="text-xl font-bold text-gray-600 dark:text-white">Session 1</div>
               <div className="mt-3 w-16 h-0.5 bg-gray-600 dark:bg-white rounded mx-auto"></div>
             </div>
             <div>
@@ -41,7 +41,7 @@ export default function Details() {
         <div className="flex flex-col md:flex-row">
           <div className="flex-1 flex flex-col justify-center items-center p-4 md:p-0 order-2 md:order-1">
             <div className="text-center mb-5">
-              <div className="text-xl font-bold text-gray-600 dark:text-white">2부</div>
+              <div className="text-xl font-bold text-gray-600 dark:text-white">Session 2</div>
               <div className="mt-3 w-16 h-0.5 bg-gray-600 dark:bg-white rounded mx-auto"></div>
             </div>
             <div>

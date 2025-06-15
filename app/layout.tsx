@@ -33,7 +33,7 @@ const lora = Lora({
 
 
 export const metadata: Metadata = {
-  title: "Welcome To Our Amazing Party🎉",
+  title: "Welcome To Party🎉",
   description: "You're invited to our unforgettable celebration!",
   icons: {
     icon: 'invitation.png'
