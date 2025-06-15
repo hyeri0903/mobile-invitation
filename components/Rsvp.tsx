@@ -39,7 +39,7 @@ export default function Rsvp() {
   };
 
   return (
-    <section className="w-full min-h-screen mx-auto flex flex-col bg-gray-50 dark:bg-gray-900">
+    <section className="w-full min-h-screen mx-auto flex flex-col bg-white dark:bg-gray-800">
       <div className="flex justify-center items-center mt-10">
         <h2 className="font-dmserif text-3xl sm:text-3xl md:text-4xl lg:text-5xl text-center mb-10 text-gray-900 dark:text-white">
           RSVP
@@ -71,7 +71,7 @@ export default function Rsvp() {
                   Going!
                 </button>
                 <button
-                  className="bg-gray-200 border-gray-200 text-yellow hover:bg-yellow-500 hover:text-black font-bold py-3 px-6 text-lg transition-transform transform hover:scale-105 rounded-lg"
+                  className="bg-gray-200 border-gray-200 text-black hover:bg-yellow-500 hover:text-black font-bold py-3 px-6 text-lg transition-transform transform hover:scale-105 rounded-lg"
                   onClick={() =>
                     alert("That's a shame! Hope to see you next time.")
                   }
@@ -143,10 +143,10 @@ export default function Rsvp() {
         <div className="flex justify-center">
           <motion.button 
             whileHover={{ scale: 1.05 }}
-            className="bg-brand-gold hover:bg-yellow-500 text-black font-bold py-3 px-8 text-lg rounded-lg"
+            className="bg-gray-200 hover:bg-yellow-500 text-black font-bold py-3 px-8 text-lg rounded-lg"
           >
             <a href={kakaoBankUrl} target="_blank" rel="noopener noreferrer">
-              카카오뱅크로 송금하기
+              Wire to KakaoBank
             </a>
           </motion.button>
         </div>
