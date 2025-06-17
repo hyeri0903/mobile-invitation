@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Input } from "./ui/input";
 import { motion } from "framer-motion";
+import Marquee from "./Marquee";
 
 type Attendee = string;
 
@@ -18,8 +19,7 @@ export default function Rsvp() {
     "Miney",
     "Hailey",
   ]);
-  const duplicatedAttendees =
-    attendees.length > 0 ? [...attendees] : [];
+  const duplicatedAttendees = attendees.length > 0 ? [...attendees] : [];
 
   const [showRsvpForm, setShowRsvpForm] = useState(false);
   const [name, setName] = useState("");
@@ -49,7 +49,7 @@ export default function Rsvp() {
 
       <div className="max-w-4xl mx-auto px-4">
         {submitted ? (
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className="text-center text-white font-bold p-4 bg-green-500 rounded-lg"
@@ -59,7 +59,7 @@ export default function Rsvp() {
         ) : (
           <>
             {!showRsvpForm && (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="flex justify-center gap-4"
@@ -82,7 +82,7 @@ export default function Rsvp() {
             )}
 
             {showRsvpForm && (
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="space-y-4 max-w-sm mx-auto"
@@ -111,37 +111,42 @@ export default function Rsvp() {
 
       <div className="max-w-4xl mx-auto px-4 mt-16">
         <div className="text-center mb-5">
-          <div className="text-xl font-bold text-gray-600 dark:text-white">Attendee List</div>
+          <div className="text-xl font-bold text-gray-600 dark:text-white">
+            Attendee List
+          </div>
           <div className="mt-3 w-16 h-0.5 bg-gray-600 dark:bg-white rounded mx-auto"></div>
         </div>
-        <div className="bg-gray-900/70 rounded-lg py-4 overflow-hidden">
-          {attendees.length > 0 ? (
-            <ul className="flex animate-marquee whitespace-nowrap">
-              {duplicatedAttendees.map((attendee, index) => (
+      </div>
+
+      {attendees.length > 0 ? (
+        <div className="bg-gray-900/70 rounded-lg py-4 overflow-x-auto">
+          <ul className="whitespace-nowrap inline-flex gap-2 justify-center animate-marquee">
+            {duplicatedAttendees.map((attendee, index) => (
                 <li
                   key={index}
-                  className="bg-gray-800/80 py-2 px-4 rounded-md text-gray-200 mx-2 flex-shrink-0"
+                  className="bg-gray-800/80 py-2 px-4 rounded-md text-gray-200 flex-shrink-0"
                 >
                   {attendee}
                 </li>
               ))}
-            </ul>
-          ) : (
-            <p className="text-gray-400 text-center">No Attendees Yet.</p>
-          )}
+          </ul>
         </div>
-      </div>
+      ) : (
+        <p className="text-gray-400 text-center">No Attendees Yet.</p>
+      )}
 
       <div className="max-w-4xl mx-auto px-4 mt-16 mb-16">
         <div className="text-center mb-5">
-          <div className="text-xl font-bold text-gray-600 dark:text-white">Participation Fee</div>
+          <div className="text-xl font-bold text-gray-600 dark:text-white">
+            Participation Fee
+          </div>
           <div className="mt-3 w-16 h-0.5 bg-gray-600 dark:bg-white rounded mx-auto"></div>
         </div>
         <p className="text-gray-700 dark:text-gray-200 text-center mb-6">
           We're asking for 20,000 won fee to join the party!
         </p>
         <div className="flex justify-center">
-          <motion.button 
+          <motion.button
             whileHover={{ scale: 1.05 }}
             className="bg-gray-200 hover:bg-yellow-500 text-black font-bold py-3 px-8 text-lg rounded-lg"
           >

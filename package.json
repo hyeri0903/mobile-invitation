@@ -13,7 +13,7 @@
   "dependencies": {
     "@types/navermaps": "^3.9.0",
     "aos": "^3.0.0-beta.6",
-    "framer-motion": "^12.16.0",
+    "framer-motion": "^12.18.1",
     "next": "^15.3.3",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",
