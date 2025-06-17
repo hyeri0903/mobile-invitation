@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { Input } from "./ui/input";
 import { motion } from "framer-motion";
-import Marquee from "./Marquee";
 
 type Attendee = string;
 
