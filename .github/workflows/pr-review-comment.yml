@@ -1,4 +1,4 @@
-name: PR Review Auto Comment
+name: PR Review Auto Comment TEST
 
 on:
   pull_request:
