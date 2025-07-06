@@ -1,0 +1,36 @@
+name: PR Review Auto Comment
+
+on:
+  pull_request:
+    types: [opened]
+  issue_comment:
+    types: [created]
+
+jobs:
+  add-review-comment:
+    if: |
+      (github.event_name == 'pull_request') ||
+      (github.event.issue.pull_request && contains(github.event.comment.body, '@review'))
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Read review template
+        id: get_template
+        run: |
+          cat .cursor/code-review-template.md > review_comment.txt
+      - name: Create review comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('review_comment.txt', 'utf8');
+            const issue_number = github.event_name === 'pull_request'
+              ? context.payload.pull_request.number
+              : context.payload.issue.number;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issue_number,
+              body: body
+            }); 
