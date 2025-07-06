@@ -10,7 +10,7 @@ jobs:
   add-review-comment:
     if: |
       (github.event_name == 'pull_request') ||
-      (github.event.issue.pull_request && contains(github.event.comment.body, '@리뷰하기'))
+      (github.event.issue.pull_request && contains(github.event.comment.body, '@review'))
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
