@@ -1,4 +1,4 @@
-name: PR Review Auto Comment TEST
+name: PR Review Auto Comment
 
 on:
   pull_request:
@@ -10,7 +10,7 @@ jobs:
   add-review-comment:
     if: |
       (github.event_name == 'pull_request') ||
-      (github.event.issue.pull_request && contains(github.event.comment.body, '@review'))
+      (github.event.issue.pull_request && (contains(github.event.comment.body, '@review') || contains(github.event.comment.body, '@리뷰하기')))
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -22,12 +22,18 @@ jobs:
       - name: Create review comment
         uses: actions/github-script@v7
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const fs = require('fs');
             const body = fs.readFileSync('review_comment.txt', 'utf8');
-            const issue_number = github.event_name === 'pull_request'
-              ? context.payload.pull_request.number
-              : context.payload.issue.number;
+            let issue_number;
+            if (github.event_name === 'pull_request') {
+              issue_number = context.payload.pull_request.number;
+            } else if (github.event_name === 'issue_comment') {
+              issue_number = context.payload.issue.number;
+            } else {
+              throw new Error('지원하지 않는 이벤트입니다.');
+            }
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
