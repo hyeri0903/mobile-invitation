@@ -13,7 +13,7 @@ jobs:
       - name: Read review template
         id: get_template
         run: |
-          cat .cursor/code-reveiw-template.md > review_comment.txt
+          cat .cursor/code-review-template.md > review_comment.txt
       - name: Create review comment
         uses: actions/github-script@v7
         with:
