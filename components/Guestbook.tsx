@@ -16,46 +16,61 @@ export default function Guestbook() {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  // Load messages from localStorage on mount
+  // Load messages from API on mount
   useEffect(() => {
-    const saved = localStorage.getItem("guestbook_messages");
-    if (saved) {
+    const fetchMessages = async () => {
       try {
-        setMessages(JSON.parse(saved));
+        const response = await fetch('/api/guestbook');
+        if (response.ok) {
+          const data = await response.json();
+          if (Array.isArray(data)) {
+            setMessages(data);
+          }
+        }
       } catch (e) {
-        console.error("Failed to parse guestbook messages", e);
+        console.error("Failed to fetch messages", e);
       }
-    }
+    };
+    fetchMessages();
   }, []);
 
-  // Save messages to localStorage whenever they change
-  useEffect(() => {
-    localStorage.setItem("guestbook_messages", JSON.stringify(messages));
-  }, [messages]);
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !message.trim()) {
       setError("이름과 메시지를 모두 입력해주세요.");
       return;
     }
 
-    const newMessage: GuestMessage = {
-      id: Date.now().toString(),
-      name: name.trim(),
-      message: message.trim(),
-      date: new Date().toLocaleDateString("ko-KR", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      }),
-    };
+    setIsLoading(true);
+    try {
+      const response = await fetch('/api/guestbook', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: name.trim(),
+          message: message.trim(),
+        }),
+      });
 
-    setMessages([newMessage, ...messages]);
-    setName("");
-    setMessage("");
-    setError("");
+      if (response.ok) {
+        const updatedMessages = await response.json();
+        setMessages(updatedMessages);
+        setName("");
+        setMessage("");
+        setError("");
+      } else {
+        setError("메시지 저장에 실패했습니다.");
+      }
+    } catch (e) {
+      setError("오류가 발생했습니다.");
+      console.error(e);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -70,7 +85,7 @@ export default function Guestbook() {
           <h2 className="font-dmserif text-4xl sm:text-5xl text-gray-900 dark:text-white mb-4">
             Guestbook
           </h2>
-          <div className="w-20 h-1 bg-rose-500 mx-auto rounded-full" />
+          <div className="mt-4 w-20 h-0.5 bg-gray-200 dark:bg-gray-700 mx-auto mb-3 rounded" />
           <p className="mt-4 text-gray-600 dark:text-gray-300">
             축하의 메시지를 남겨주세요!
           </p>
@@ -110,9 +125,10 @@ export default function Guestbook() {
 
           <button
             type="submit"
-            className="w-full bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+            disabled={isLoading}
+            className="w-full bg-gray-900 hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-gray-900 font-bold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            등록
+            {isLoading ? "등록 중..." : "등록"}
           </button>
         </motion.form>
 
