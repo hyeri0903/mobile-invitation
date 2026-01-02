@@ -3,8 +3,7 @@ import Features from "components/Features";
 import Footer from "components/Footer";
 import Details from "components/Details";
 import Main from "components/Main";
-import Head from 'next/head';
-import Rsvp from "components/Rsvp";
+import Guestbook from "components/Guestbook";
 
 
 export default function Page() {
@@ -16,7 +15,7 @@ export default function Page() {
         <Main />
         <Features />
         <Details />
-        <Rsvp />
+        <Guestbook />
       </main>
       <Footer />
     </div>
